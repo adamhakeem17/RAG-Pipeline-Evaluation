@@ -82,9 +82,7 @@ RAGAS faithfulness and Answer Relevancy uses an LLM. This project uses a **local
 - **`notebook/demo_pipeline.ipynb`** — Main pipeline notebook with full workflow
 - **`data/ground_truth.json`** — Question/answer pairs for evaluation
 - **`data/DSP_API_Guide-200-en.pdf`** — RAG dataset (technical documentation)
-- **`evaluation_results_*.csv`** — Output evaluation metrics (can be converted to Excel)
 
 
 ## Deliverables
 - `notebook/demo_pipeline.ipynb` runs the end-to-end pipeline.
-- `evaluation_results_*.csv` contains exported evaluation results for different chunk sizes.
