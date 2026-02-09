@@ -1,0 +1,55 @@
+{
+  "corpus": "Privitar Data Security Platform REST API Guide v2.0.0",
+  "items": [
+    {
+      "id": 1,
+      "question": "How do I generate a JWT bearer token to authenticate my API requests?",
+      "answer": "Issue a POST request to /graph/enterprise-management/v1/registration/login with your username and password in JSON format. The response will contain your JWT token which you can use as a bearer token in the Authorization header for subsequent API requests."
+    },
+    {
+      "id": 2,
+      "question": "What is the base URL structure for all API endpoints?",
+      "answer": "All API endpoints follow the structure: https://<your_DSP_environment_url>/api/v1/<ENDPOINT>. For example, the Terms API endpoint would be https://<your_DSP_environment_url>/api/v1/terms"
+    },
+    {
+      "id": 3,
+      "question": "How do I find the exchange ID needed for certain API calls?",
+      "answer": "Log in to the platform, click Data Exchange in the left navigation, click the avatar symbol in the top right corner, select View Exchange, and copy the Data Exchange ID displayed."
+    },
+    {
+      "id": 4,
+      "question": "Can I delete system attribute types using the API?",
+      "answer": "No, you cannot delete system attribute types, but you can modify them using PUT /api/v1/attributes/{id} to change their list of valid values."
+    },
+    {
+      "id": 5,
+      "question": "What's the difference between submitting an asset for review versus creating a draft asset?",
+      "answer": "POST /api/v1/datasets/{datasetId}/assets creates a new draft asset, while PUT /api/v1/datasets/{datasetId}/assets/{id}/register submits an existing draft asset for review by a data guardian."
+    },
+    {
+      "id": 6,
+      "question": "How do I approve or reject a transformation policy that's been submitted for review?",
+      "answer": "Use PUT /api/v1/policy-tasks/{id} to approve or reject policy tasks. You can retrieve the task details first using GET /api/v1/policy-tasks/{id} to review what needs approval."
+    },
+    {
+      "id": 7,
+      "question": "What HTTP status code indicates successful creation of a new resource via the API?",
+      "answer": "A successful POST (create) request returns a 201 CREATED status code, and the response body will contain the details of the newly created object."
+    },
+    {
+      "id": 8,
+      "question": "Do consumption projects and migration projects use the same API endpoints?",
+      "answer": "No, the Project API endpoints (under /api/v1/projects) only support consumption projects, not migration projects."
+    },
+    {
+      "id": 9,
+      "question": "How can I interactively test API endpoints without writing code?",
+      "answer": "Use Swagger UI by navigating to https://<your_DSP_environment_url>/api/v1/api-docs/swagger-ui.html. After authorizing with your JWT token, you can expand any endpoint and use the 'Try it out' feature to test requests and see responses."
+    },
+    {
+      "id": 10,
+      "question": "What format are all API request and response payloads in?",
+      "answer": "All REST API requests and responses use JSON (JavaScript Object Notation) format, which includes data types: String, Number, Boolean, Null, Object, and Array."
+    }
+  ]
+}
